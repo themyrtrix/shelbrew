@@ -4,19 +4,29 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .search-bar {
   display: flex;
-  justify-content: left;
   align-items: center;
-  background-color: blanchedalmond;
+  background-color: white;
   padding: 10px 24px;
   border-radius: 50px;
 }
 
 .search-bar input {
   flex: 1;
-  padding: 8px;
+  font-size: small;
   border: none;
+  background: transparent;
+  outline: none;
 }
 
 .search-icon {
@@ -24,4 +34,111 @@
   height: 20px;
   margin-right: 10px;
   color: grey;
+}
+
+.menu-screen {
+  display: flex;
+  height: 100%;
+  padding: 24px;
+  gap: 24px;
+
+}
+
+.menu-left {
+  width: 200px;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.menu-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 16px;
+}
+
+.menu-grid-wrapper {
+  flex: 1;
+  overflow-y: scroll;
+  min-height: 0;
+  padding-bottom: 24px;
+  padding-right: 8px;
+}
+
+.menu-grid-wrapper::-webkit-scrollbar {
+  width: 6px;
+  display: block;
+}
+
+.menu-grid-wrapper::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+.menu-grid-wrapper::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.menu-grid-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 16px;
+  padding: 4px;
+}
+
+.menu-right {
+  display: flex;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.menu-card {
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 280px;
+}
+
+.menu-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-card button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.unavailable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.unavailable .menu-card-btn {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.menu-card-btn {
+  align-self: flex-end;
+  padding: 8px 12px;
+  background-color: rgb(34, 185, 34);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
 }

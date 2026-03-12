@@ -13,8 +13,20 @@ function MenuScreen() {
 
     return (
         <div className="menu-screen">
-            <SearchBar onSearch={setSearchTerm} />
-            <MenuGrid items={filteredItems} />
+            <div className="menu-left">
+                <h2>Categories</h2>
+            </div>
+
+            <div className="menu-center">
+                <SearchBar onSearch={setSearchTerm} />
+                <div className="menu-grid-wrapper">
+                <MenuGrid items={filteredItems} />
+                </div>
+            </div>
+
+            <div className="menu-right">
+                <h2>Order Summary</h2>
+            </div>
         </div>
     );
 }

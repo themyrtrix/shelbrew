@@ -35,12 +35,12 @@ export const MENU_ITEMS = [
   { id: 7, name: 'Hot Chocolate', category: MENU_CATEGORIES.HOT_DRINKS, price: 160, available: true },
 
   // Cold Drinks
-  { id: 8, name: 'Iced Americano', category: MENU_CATEGORIES.COLD_DRINKS, price: 150, available: true },
-  { id: 9, name: 'Iced Latte', category: MENU_CATEGORIES.COLD_DRINKS, price: 175, available: true },
-  { id: 10, name: 'Iced Mocha', category: MENU_CATEGORIES.COLD_DRINKS, price: 190, available: true },
+  { id: 8, name: 'Iced Americano', category: MENU_CATEGORIES.COLD_DRINKS, price: 150, available: false },
+  { id: 9, name: 'Iced Latte', category: MENU_CATEGORIES.COLD_DRINKS, price: 175, available: false },
+  { id: 10, name: 'Iced Mocha', category: MENU_CATEGORIES.COLD_DRINKS, price: 190, available: false },
   { id: 11, name: 'Caramel Iced Latte', category: MENU_CATEGORIES.COLD_DRINKS, price: 195, available: true },
   { id: 12, name: 'Frappé', category: MENU_CATEGORIES.COLD_DRINKS, price: 185, available: true },
-  { id: 13, name: 'Honey Lemonade', category: MENU_CATEGORIES.COLD_DRINKS, price: 145, available: true },
+  { id: 13, name: 'Honey Lemonade', category: MENU_CATEGORIES.COLD_DRINKS, price: 145, available: false },
 
   // Pastries
   { id: 14, name: 'Croissant', category: MENU_CATEGORIES.PASTRIES, price: 95, available: true },
