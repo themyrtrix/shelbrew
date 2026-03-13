@@ -1,1 +1,1 @@
-// fetch menu from Firebase
+// fetch from firebase auth state
