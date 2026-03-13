@@ -2,14 +2,16 @@
 
 function Login() {
     return (
-        <>
-            <h1>Admin Login</h1>
+        <div className="login-screen">
+            <h1>Shelbrew</h1>
             <form className="login-form">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <button type="submit">Login</button>
+                <div className="input-field">
+                    <input type="text" placeholder="Username" />
+                    <input type="password" placeholder="Password" />
+                </div>
+                <button className="login-btn" type="submit">Login</button>
             </form>
-        </>
+        </div>
     );
 }
 
