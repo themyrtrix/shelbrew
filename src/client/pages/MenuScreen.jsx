@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { MENU_ITEMS } from '../../shared/constants'
+import { db } from '../../shared/firebase'
 import MenuGrid from '../components/MenuGrid'
 import SearchBar from '../components/SearchBar'
 import '../../index.css'
@@ -13,7 +13,7 @@ function MenuScreen() {
     return () => clearTimeout(timer);
   }, []);
 
-  const filteredItems = MENU_ITEMS.filter(item =>
+  const filteredItems = db.filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
