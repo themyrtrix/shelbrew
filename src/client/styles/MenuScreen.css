@@ -78,6 +78,7 @@
   min-height: 0;
   padding-bottom: 24px;
   padding-right: 8px;
+  touch-action: pan-y;
 }
 
 .menu-grid-wrapper::-webkit-scrollbar {

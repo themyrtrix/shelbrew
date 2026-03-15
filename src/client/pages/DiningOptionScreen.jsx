@@ -1,26 +1,32 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { DINING_OPTIONS } from "../../shared/constants";
 import "../styles/DiningOptionScreen.css";
 
 function DiningOptionScreen() {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const navigate = useNavigate();
+
+  const handleSelect = (option) => {
+    navigate('/menu', { state: { diningOption: option } });
+  };
 
   return (
     <div className="dining-option-screen">
-      <h1>Come in. Take it slow.</h1>
+      <h1>Welcome to Shelbrew!</h1>
       <p>Where would you like to eat?</p>
       <div className="options">
-        <button 
-          className={`option-button ${selectedOption === DINING_OPTIONS.TAKE_OUT ? 'selected' : ''}`}
-          onClick={() => setSelectedOption(DINING_OPTIONS.TAKE_OUT)}
+        <button
+          className="option-button"
+          onClick={() => handleSelect(DINING_OPTIONS.TAKE_OUT)}
         >
-          Take Out
+          <img src="/icons/bag-icon.svg" className="option-icon" />
+          <p>Take Out</p>
         </button>
-        <button 
-          className={`option-button ${selectedOption === DINING_OPTIONS.DINE_IN ? 'selected' : ''}`}
-          onClick={() => setSelectedOption(DINING_OPTIONS.DINE_IN)}
+        <button
+          className="option-button"
+          onClick={() => handleSelect(DINING_OPTIONS.DINE_IN)}
         >
-          Dine In
+          <img src="/icons/coffee-icon.svg" className="option-icon" />
+          <p>Dine In</p>
         </button>
       </div>
     </div>
