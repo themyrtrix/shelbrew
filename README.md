@@ -94,5 +94,5 @@ npm run build:admin
 
 | Name | Role |
 |------|------|
-| Myrtle | Frontend — Kiosk UI |
+| Myrtle John Maravilla | Full Stack — Frontend, Firebase, Project Manager |
 | Charles | Backend — Firebase, Authentication |
