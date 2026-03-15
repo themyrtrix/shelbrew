@@ -1,16 +1,98 @@
-# React + Vite
+# Shelbrew Self-Ordering Kiosk
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> ⚠️ This project is currently in active development. Features may be incomplete or subject to change.
 
-Currently, two official plugins are available:
+A self-ordering kiosk system for Shelbrew coffee shop. Customers can browse the menu, select a dining option, and place orders directly from the kiosk. Staff can manage orders and menu availability through the admin dashboard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Kiosk** — dining option selection, menu browsing, search, and cart
+- **Admin** — secure login, order management, menu availability toggle
+- **Real-time** — menu and order updates powered by Firestore
+- **Responsive** — scales across tablet and large screen displays
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+| Technology | Purpose |
+|------------|---------|
+| React + Vite | UI framework and build tool |
+| JavaScript | Core language |
+| Firebase Firestore | Database |
+| Firebase Authentication | Admin login |
+| React Router DOM | Page navigation |
+| CSS | Styling |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+```
+shelbrew/
+├── public/
+│   ├── images/        ← menu item images
+│   └── icons/         ← SVG icons
+├── src/
+│   ├── admin/         ← admin dashboard
+│   ├── client/        ← customer kiosk
+│   ├── shared/        ← firebase, constants, global styles
+│   └── main.jsx
+├── .env.kiosk
+├── .env.admin
+└── vite.config.js
+```
+
+## Prerequisites
+
+Before running this project, make sure you have the following installed:
+- Node.js v18 or higher — [Download here](https://nodejs.org)
+- npm — comes bundled with Node.js
+- A Firebase project with Firestore and Email/Password Authentication enabled
+
+## Setup
+
+### 1. Clone the repository
+
+Clone the project to your local machine and navigate into the project folder.
+```bash
+git clone https://github.com/themyrtrix/shelbrew.git
+```
+
+### 2. Install dependencies
+
+Inside the project folder, install the required packages.
+```bash
+npm install
+```
+
+### 3. Configure Firebase
+
+Open `src/shared/firebase.js` and replace the Firebase config values with your own project credentials from the Firebase Console.
+
+Make sure the following are enabled in your Firebase project:
+- Firestore Database
+- Authentication → Email/Password sign-in method
+
+### 4. Run the app locally
+
+You can run either the kiosk or admin app independently.
+```bash
+# Customer-facing kiosk
+npm run dev:kiosk
+
+# Admin dashboard
+npm run dev:admin
+```
+
+Once running, open your browser and go to `http://localhost:5173`.
+
+## Building for Production
+
+When ready to deploy, build both apps separately. Each will output to its own folder inside `dist/`.
+```bash
+npm run build:kiosk
+npm run build:admin
+```
+
+## Team
+
+| Name | Role |
+|------|------|
+| Myrtle | Frontend — Kiosk UI |
+| Charles | Backend — Firebase, Authentication |
