@@ -82,14 +82,6 @@ npm run dev:admin
 
 Once running, open your browser and go to `http://localhost:5173`.
 
-## Building for Production
-
-When ready to deploy, build both apps separately. Each will output to its own folder inside `dist/`.
-```bash
-npm run build:kiosk
-npm run build:admin
-```
-
 ## Team
 
 | Name | Role |
