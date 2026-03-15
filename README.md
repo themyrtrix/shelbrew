@@ -86,5 +86,5 @@ Once running, open your browser and go to `http://localhost:5173`.
 
 | Name | Role |
 |------|------|
-| Myrtle John Maravilla | Full Stack — Frontend, Firebase, Project Manager |
+| Myrtle | Full Stack — Frontend, Firebase, Project Manager |
 | Charles | Backend — Firebase, Authentication |
