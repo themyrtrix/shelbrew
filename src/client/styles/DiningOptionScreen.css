@@ -10,8 +10,9 @@
   text-align: center;
   justify-content: center;
   height: 100%;
-  background-color: #f0f0f0;
-  gap: clamp(8px, 1.5vw, 20px);
+  background-image: url("../../assets/landing-page-bg.png");
+  background-size: cover;
+  gap: clamp(16px, 3vw, 24px);
 }
 
 .dining-option-screen > * {
@@ -20,15 +21,10 @@
 }
 
 .dining-option-screen h1 {
-  font-size: clamp(22px, 2.5vw, 40px);
-  font-weight: 800;
-  color: black;
-}
-
-.dining-option-screen p {
-  font-size: clamp(14px, 1.6vw, 26px);
-  font-weight: thin;
-  color: black;
+  font-size: clamp(48px, 10vw, 160px);
+  font-weight: 100;
+  color: white;
+  font-family: "Luxurious Script", cursive;
 }
 
 /* ================================
@@ -38,7 +34,6 @@
 .options {
   display: flex;
   gap: clamp(16px, 2.5vw, 40px);
-  margin-top: clamp(16px, 2.5vw, 40px);
 }
 
 .option-button {
@@ -46,25 +41,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: clamp(12px, 1.5vw, 24px);
   width: clamp(180px, 20vw, 360px);
   height: clamp(260px, 30vw, 500px);
   cursor: pointer;
-  border: none;
   gap: clamp(8px, 1.2vw, 20px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.option-image {
-  width: clamp(40px, 5.5vw, 88px);
-  height: clamp(40px, 5.5vw, 88px);
+.option-icon {
+  width: clamp(60px, 8vw, 120px);
+  height: clamp(60px, 8vw, 120px);
 }
 
 .option-button p {
   font-size: clamp(14px, 1.6vw, 26px);
-  color: black;
+  color: white;
 }
 
 .option-button:active {

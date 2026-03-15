@@ -11,8 +11,7 @@ function DiningOptionScreen() {
 
   return (
     <div className="dining-option-screen">
-      <h1>Welcome to Shelbrew!</h1>
-      <p>Where would you like to eat?</p>
+      <h1>Shelbrew</h1>
       <div className="options">
         <button
           className="option-button"
